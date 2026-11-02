@@ -1,0 +1,4 @@
+node_modules/
+.clawhub-validation/
+*.log
+.DS_Store

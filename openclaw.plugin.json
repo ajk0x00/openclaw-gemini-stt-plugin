@@ -1,0 +1,46 @@
+{
+  "id": "gemini-transcribe",
+  "name": "Gemini 3.5 Transcribe",
+  "description": "Audio transcription via Gemini 3.5 Transcribe (Google Interactions API).",
+  "version": "0.1.0",
+  "activation": {
+    "onStartup": false
+  },
+  "setup": {
+    "providers": [
+      {
+        "id": "gemini-transcribe",
+        "envVars": [
+          "GEMINI_API_KEY",
+          "GOOGLE_API_KEY"
+        ]
+      }
+    ]
+  },
+  "contracts": {
+    "mediaUnderstandingProviders": [
+      "gemini-transcribe"
+    ]
+  },
+  "mediaUnderstandingProviderMetadata": {
+    "gemini-transcribe": {
+      "capabilities": [
+        "audio"
+      ],
+      "defaultModels": {
+        "audio": "gemini-3.5-transcribe"
+      },
+      "autoPriority": {
+        "audio": 25
+      }
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "categories": [
+    "voice"
+  ]
+}
